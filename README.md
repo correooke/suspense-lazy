@@ -38,11 +38,29 @@ https://github.com/smooth-code/loadable-components
 https://www.smooth-code.com/open-source/loadable-components/docs/loadable-vs-react-lazy/
 https://github.com/react-boilerplate/react-boilerplate/blob/master/docs/js/async-components.md
 
+import loadable from 'loadable-components';
+
+export default loadable(() => import('./Home'), {
+  LoadingComponent: () => <div>Loading...</div>,
+})
+
 ### react-loadable
 
 https://github.com/jamiebuilds/react-loadable
 
+import Loadable from 'react-loadable';
+import Loading from './my-loading-component';
 
+const LoadableComponent = Loadable({
+  loader: () => import('./my-component'),
+  loading: Loading,
+});
+
+export default class App extends React.Component {
+  render() {
+    return <LoadableComponent/>;
+  }
+}
 
 ## Para ver el código en funcionamiento
 
