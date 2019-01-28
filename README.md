@@ -19,6 +19,7 @@ No sólo por el peso de la descarga de las librerías, sino también para reduci
  - tiempo de parseo (parsing)
  - tiempo de compilación.
 
+https://reactjs.org/docs/code-splitting.html
 https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4
 
 ## Herramienta de profiling
@@ -61,6 +62,10 @@ export default class App extends React.Component {
     return <LoadableComponent/>;
   }
 }
+
+"React.lazy and Suspense is not yet available for server-side rendering. If you want to do code-splitting in a server rendered app, we recommend Loadable Components. It has a nice guide for bundle splitting with server-side rendering."
+
+
 
 ## Para ver el código en funcionamiento
 
