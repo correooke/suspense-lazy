@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import Home from './components/Home';
-//import Home from './components/HomeStatic';
 
 class App extends Component {
 

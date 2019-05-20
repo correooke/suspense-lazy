@@ -1,17 +1,13 @@
-import React, {Suspense} from 'react';
-
-const ModuleA = React.lazy(() => import ('./ModuleA'));
-const ModuleB = React.lazy(() => import ('./ModuleB'));
+import React, { Suspense } from 'react';
+import Container from './Container';
 
 
 const Home = ({module}) => (
-    <Suspense fallback={< h1 > Cargando ...</h1>}>
-        <div className="home">
-            <div>Módulos dinámicos</div>            
-            {module === 'A' && <ModuleA/>}
-            {module === 'B' && <ModuleB/>}
-        </div>
-    </Suspense>
+        <Suspense fallback={<h2>Cargando...</h2>}>
+            <Container module={module}></Container>
+            <div>Módulos dinámicos</div>
+
+        </Suspense>
 );
 
 export default Home;
